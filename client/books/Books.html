@@ -1,0 +1,12 @@
+<template name="Books">
+  {{> NewBook}}
+  <section class="books">
+  {{#if Template.subscriptionReady}}
+      {{#each books}}
+          {{> Book}}
+      {{/each}}
+  {{else}}
+  <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>
+  {{/if}}
+  </section>
+</template>
