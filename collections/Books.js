@@ -3,6 +3,9 @@ Books = new Mongo.Collection('books');
 Books.allow({
   insert: function(userId,doc){
     return !!userId;
+  },
+  update: function (userId, doc) {
+    return !!userId;
   }
 })
 
@@ -41,6 +44,10 @@ BookSchema = new SimpleSchema({
         type: "hidden"
       }
    }
+});
+
+Meteor.methods({
+
 });
 
 Books.attachSchema(BookSchema);

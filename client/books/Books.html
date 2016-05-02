@@ -1,7 +1,7 @@
 <template name="Books">
   {{> NewBook}}
   <section class="books">
-  {{#if Template.subscriptionReady}}
+  {{#if Template.subscriptionsReady}}
       {{#each books}}
           {{> Book}}
       {{/each}}

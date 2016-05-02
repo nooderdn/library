@@ -6,6 +6,8 @@ Template.Books.onCreated(function(){
   });
 });
 
+// Meteor.subscribe('books');
+
 Template.Books.helpers({
   books: ()=>{
     return Books.find({});

@@ -2,8 +2,8 @@
     <article class="book">
       <h3>{{title}}</h3>
       <h4>{{author}}</h4>
-      <p>
-        {{desc}}
-      </p>
+      <a href="/book/{{_id}}">View Details</a>
+      <button class="btn-primar toggle-menu">Edit</button>
+      {{> quickForm collection="Books" id=updateBookId type="update" doc=this autosave=true}}
     </article>
 </template>
