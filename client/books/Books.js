@@ -13,3 +13,9 @@ Template.Books.helpers({
     return Books.find({});
   }
 });
+
+Template.Books.events({
+    'click .new-book':()=>{
+        Session.set('newBook', true);
+    }
+});

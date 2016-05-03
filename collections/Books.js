@@ -47,7 +47,9 @@ BookSchema = new SimpleSchema({
 });
 
 Meteor.methods({
-
+  deleteBook: function(id){
+    Books.remove(id);
+  }
 });
 
 Books.attachSchema(BookSchema);

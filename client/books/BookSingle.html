@@ -1,4 +1,18 @@
 <template name="BookSingle">
-  <h1>{{book.title}}</h1>
-
+    <div class="book-container">
+      <figure class='book-detail'>
+        <!-- Front -->
+        <div class="book-img">
+            <img src="http://www.mediafire.com/convkey/a15a/mf3wxbziagg4b6czg.jpg" alt="" width="100%" height="100%">
+        </div>
+        <figcaption>
+          <h1>{{book.title}}</h1>
+          <span>By {{book.author}}</span>
+          <h3>Edition: {{book.edition}}</h3>
+          <h3>Released: {{book.releasedYear}}</h3>
+          <h3>Description:</h3>
+          <p>{{book.desc}}</p>
+        </figcaption>
+      </figure>
+    </div>
 </template>

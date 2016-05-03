@@ -1,5 +1,11 @@
 <template name="Books">
-  {{> NewBook}}
+
+  {{#if $.Session.get 'newBook'}}
+      {{> NewBook}}
+  {{else}}
+      <button class="new-book">New Book</button>
+  {{/if}}
+
   <section class="books">
   {{#if Template.subscriptionsReady}}
       {{#each books}}

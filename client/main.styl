@@ -334,7 +334,7 @@ input, select, textarea
         margin-bottom 10px
     button
         margin-top 20px
-    .fa-trash
+    .fa-trash, .fa-pencil
         opacity 0.3
         cursor pointer
         position absolute
@@ -348,6 +348,11 @@ input, select, textarea
         &:hover
             color red
             opacity 0.6
+    .fa-pencil
+        right 40px
+        margin-left 20px
+        &:hover
+            color teal
     .ingredient
         display inline-block
         margin-right 10px
@@ -390,3 +395,23 @@ input, select, textarea
         left auto
         a
             color dark-purp
+
+.book-container
+  position relative
+.book-img
+  width 20%
+  height auto
+  float left
+
+figcaption
+  position absolute
+  margin-left: 10px
+  left 25%
+  &>h1
+    font-size 2em
+    margin 0 0 0.67em 0
+  &>span
+    color #00695C
+    font-weight bold
+  &>p
+    font-weight bold
