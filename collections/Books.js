@@ -12,7 +12,7 @@ Books.allow({
 BookSchema = new SimpleSchema({
    title: {
      type: String,
-     label: "Title",
+     label: "Title"    
    },
    author: {
      type: String,

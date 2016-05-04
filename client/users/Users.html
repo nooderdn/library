@@ -1,0 +1,41 @@
+<template name="Users">
+    {{#if admin}}
+    <h1 class="page-title">Users</h1>
+      {{#if $.Session.get 'newUser'}}
+          {{> NewUser}}
+      {{else}}
+          <button class="new-btn">New User</button>
+      {{/if}}
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Created At</th>
+        <th>Admin</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      {{#each users}}
+      <tr>
+        <td class="user_id">{{_id}}</td>
+        <td>{{userEmail}}</td>
+        <td>{{dateFormat}}</td>
+        <td>
+            <div class="role-change">
+              {{#if admin}}
+              <button class="toggle-admin">Remove Admin</button>
+              {{else}}
+              <button class="toggle-admin">Make Admin</button>
+              {{/if}}
+            </div>
+        </td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+      {{/each}}
+    </table>
+    {{else}}
+      <h1>Bạn không có quyền truy cập</h1>
+    {{/if}}
+</template>

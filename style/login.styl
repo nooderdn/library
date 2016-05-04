@@ -1,0 +1,40 @@
+//Style cho phan LoginModal
+.login-modal
+  position: fixed
+  border: solid 4px $dblue
+  top: 20%
+  left: 50%
+  padding: 20px
+  width: 50%
+  transform: translate3d(25%, -80%, 0) scale(0.5)
+  background: #FFF
+  opacity: 0
+  trans()
+  card(4)
+  &.open
+    opacity: 1
+    transform: translateX(-50%) scale(1)
+  h3
+    margin-top: 0
+  .close-login
+    position: absolute
+    top: 0
+    right: 0
+    display: block
+    cursor: pointer
+    font-size: 2em
+    padding: 10px 15px
+    opacity: 0.2
+
+//Mot so mixin
+trans($sec = 0.2s)
+  -webkit-transition: all $sec ease-out
+  -moz-transition: all $sec ease-out
+  -ms-transition: all $sec ease-out
+  -o-transition: all $sec ease-out
+  transition: all $sec ease-out
+card($depth)
+  if $depth < 1
+    box-shadow: none
+  else
+    box-shadow: bottom-shadow($depth), top-shadow($depth)

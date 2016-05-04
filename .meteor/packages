@@ -30,6 +30,8 @@ aldeed:collection2
 aldeed:autoform
 accounts-ui
 accounts-password
+accounts-base
+useraccounts:unstyled
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
@@ -39,3 +41,5 @@ datariot:ganalytics
 session
 
 check
+
+alanning:roles

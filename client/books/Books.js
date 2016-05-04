@@ -15,7 +15,7 @@ Template.Books.helpers({
 });
 
 Template.Books.events({
-    'click .new-book':()=>{
+    'click .new-btn':()=>{
         Session.set('newBook', true);
     }
 });

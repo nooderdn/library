@@ -1,0 +1,36 @@
+<template name="NewUser">
+  <div class="new-book-container">
+    <i class="fa fa-close"></i>
+    <form role="form" id="at-pwd-form" novalidate="" action="#" method="POST">
+      <div class="at-input">
+        <label for="email">Email </label>
+        <input type="email" id="email" name="email" placeholder="Email" autocapitalize="none" autocorrect="off">
+      </div>
+      <div class="at-input">
+        <label for="password"> Password </label>
+        <input type="password" id="password" name="password" placeholder="Password" autocapitalize="none" autocorrect="off">
+      </div>
+      <div class="at-input">
+        <label for="nameField">
+          Name (Optional)
+        </label>
+      <input type="text" id="name" name="nameField" placeholder="Name" autocapitalize="none" autocorrect="off">
+    </div>
+      <div class="at-input">
+        <label for="address">
+          Address (Optional)
+        </label>
+      <input type="text" id="address" name="address" placeholder="Address" autocapitalize="none" autocorrect="off">
+    </div>
+
+      <div class="at-input">
+        <label for="phone">
+          Phone Number (Optional)
+        </label>
+      <input type="tel" id="phone" name="phone" placeholder="Phone" autocapitalize="none" autocorrect="off">
+    </div>
+        <button type="submit" class="btn-primary at-btn submit" id="at-btn"> Submit </button>
+      </form>
+  </div>
+
+</template>

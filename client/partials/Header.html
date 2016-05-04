@@ -1,6 +1,15 @@
 <template name="Header">
-  <header>
-    <h1>Library</h1>
-    {{> loginButtons}}
-  </header>
+
+      <header class="header">
+        <h1>Library</h1>
+        <ul>
+          {{#if currentUser}}
+                  <li class="logout">Logout</li>
+          {{else}}
+                  <li class="login-toggle">Login/Sign-up</li>
+          {{/if}}
+        </ul>
+      </header>
+      {{> LoginModal}}
+
 </template>

@@ -1,10 +1,24 @@
 {
-  "name": "again",
+  "name": "library",
   "private": true,
   "scripts": {
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
-  }
+    "meteor-node-stubs": "~0.2.0",
+    "moment": "^2.13.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nooderdn/library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nooderdn/library/issues"
+  },
+  "homepage": "https://github.com/nooderdn/library#readme",
+  "description": ""
 }

@@ -1,0 +1,28 @@
+/*Style cho phan user*/
+card($depth)
+  if $depth < 1
+    box-shadow: none
+  else
+    box-shadow: bottom-shadow($depth), top-shadow($depth)
+
+table
+  font-size: 0.8em
+  width: 100%
+  position: relative
+  transition: all 0.4s cubic-bezier(0.68, -0.65, 0.265, 1.2)
+  card(2)
+  tr:nth-child(even)
+    background: #ccc
+  td, th
+    text-align: left
+    padding: 10px 5px
+  th
+    text-transform: uppercase
+    background: #19283f
+    color: #fff
+  &.edit-mode
+    transform: translate3d(300px, 0, 0)
+
+.user_id
+    cursor pointer
+    color blue
