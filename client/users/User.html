@@ -1,0 +1,24 @@
+<template name="User">
+
+        <tr>
+          <td class="user_id"><a href="/user/{{_id}}">{{_id}}</a></td>
+          <td>{{userEmail}}</td>
+          <td>{{dateFormat}}</td>
+          <td>
+              <div class="role-change">
+                {{#if isAdmin}}
+                <button class="toggle-admin">Remove Admin</button>
+                {{else}}
+                <button class="toggle-admin">Make Admin</button>
+                {{/if}}
+              </div>
+          </td>
+          <td><button class="edit-user">Edit</button></td>
+          <td><button class="delete-user">Delete</button></td>
+        </tr>
+    {{#if editUserMode}}
+        <tr>
+          <td colspan="6">{{> EditUser}}</td>
+        </tr>
+    {{/if}}
+</template>

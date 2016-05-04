@@ -17,22 +17,7 @@
         <th>Delete</th>
       </tr>
       {{#each users}}
-      <tr>
-        <td class="user_id">{{_id}}</td>
-        <td>{{userEmail}}</td>
-        <td>{{dateFormat}}</td>
-        <td>
-            <div class="role-change">
-              {{#if admin}}
-              <button class="toggle-admin">Remove Admin</button>
-              {{else}}
-              <button class="toggle-admin">Make Admin</button>
-              {{/if}}
-            </div>
-        </td>
-        <td>Edit</td>
-        <td>Delete</td>
-      </tr>
+        {{> User}}
       {{/each}}
     </table>
     {{else}}

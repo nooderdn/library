@@ -7,14 +7,18 @@ Template.NewUser.events({
            var nameVar = template.find('#name').value;
            var phoneVar = template.find('#phone').value;
            var addressVar = template.find('#address').value;
-           console.log(emailVar);
-           Accounts.createUser({
-             email: emailVar,
-             password: passwordVar,
-             profile: {name: nameVar, phone: phoneVar, address: addressVar}
-           });
+           Meteor.call('addUser',emailVar, passwordVar,nameVar, phoneVar,addressVar);
+           resetForm(template);
        },
        'click .fa-close': function () {
            Session.set('newUser',false);
        }
      });
+
+function resetForm(template){
+    template.find('#email').value = '';
+    template.find('#password').value = '';
+    template.find('#name').value = '';
+    template.find('#phone').value = '';
+    template.find('#address').value = '';
+}
